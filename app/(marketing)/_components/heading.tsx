@@ -3,7 +3,8 @@ import { Spinner } from '@/components/spinner';
 import { Button } from '@/components/ui/button';
 import { SignInButton } from '@clerk/nextjs';
 import { useConvexAuth } from 'convex/react';
-import { ArrowRight, Link } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 const Heading = () => {
   const {isAuthenticated, isLoading} = useConvexAuth()
   return (
@@ -17,8 +18,8 @@ const Heading = () => {
         {isLoading && (
           <div className="w-ful flex items-center justify-center"><Spinner size="lg"/></div>
         )}
-        {isAuthenticated && !isLoading &&(
-          <Button asChild><Link>Enter Jotion <ArrowRight className='h-4 w- ml-2'/></Link></Button>
+        {isAuthenticated && !isLoading && (
+          <Button size='lg' asChild><Link className='text-white' href="/documents">Enter Jotion<ArrowRight className='h-4 w- ml-2'/></Link></Button>
         )}
         {!isAuthenticated && !isLoading && (
           <SignInButton mode="modal">

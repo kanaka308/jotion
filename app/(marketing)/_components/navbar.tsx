@@ -37,7 +37,6 @@ const Navbar = () => {
       <Link href="/documents">Enter Jotion</Link>
     </Button>
     <UserButton afterSignOutUrl="/"/>
-    
     </>
   )}
       
