@@ -23,7 +23,7 @@ const Heading = () => {
         )}
         {!isAuthenticated && !isLoading && (
           <SignInButton mode="modal">
-            <Button>Get Jotion Free <ArrowRight className='h-4 w- ml-2'/></Button>
+            <Button className='dark:text-black'>Get Jotion Free <ArrowRight className='h-4 w- ml-2'/></Button>
           </SignInButton>
         )} 
         
